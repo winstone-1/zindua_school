@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h1 style="color:#1a1a2e; margin-bottom:1.5rem;">Contact Us</h1>
+
+<p>📧 {{ email }}</p>
+<p style="margin-top:0.5rem;">📞 {{ phone }}</p>
+<p style="margin-top:0.5rem;">📍 {{ location }}</p>
+
+<h2 style="margin-top:2rem; color:#1a1a2e;">Follow Us</h2>
+<div style="display:flex; gap:1rem; margin-top:1rem;">
+    {% for social in socials %}
+    <span style="background:#1a1a2e; color:white; padding:0.5rem 1rem; border-radius:5px;">
+        {{ social }}
+    </span>
+    {% endfor %}
+</div>
+{% endblock %}
